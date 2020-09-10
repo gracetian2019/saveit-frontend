@@ -1,0 +1,117 @@
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+        }
+        
+        .App {
+            text-align: center;
+        }
+        
+        #header {
+            background: red;
+            background: -webkit-linear-gradient(left, pink, violet, olive, pink, blue, violet);
+            background: -o-linear-gradient(right, pink, violet, olive, pink, blue, violet);
+            background: -moz-linear-gradient(right, pink, violet, olive, pink, blue, violet);
+            background: linear-gradient(to right, pink, violet, olive, pink, blue, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 6rem;
+        }
+        
+        form {
+            text-align: left;
+            margin-left: 35rem;
+            margin-top: 15rem;
+            color: #fe7171;
+        }
+        
+        label {
+            font-size: 1.5rem;
+        }
+        
+        input,
+        label {
+            display: block;
+            margin: auto;
+        }
+        
+        input[type="submit"] {
+            width: 10rem;
+            margin-top: 2rem;
+            height: 1.5rem;
+        }
+        
+        ol {
+            width: 50%;
+            margin: auto;
+        }
+        
+        ol li {
+            width: 20%;
+            margin: auto;
+        }
+        
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #ffb0b0;
+        }
+        /* ul.nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            background: #ffb0b0;
+            height: 56px;
+        } */
+        
+        ul.nav li {
+            float: left;
+        }
+        
+        ul.nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        ul.nav li a:hover {
+            background-color: #fe7171;
+        }
+        
+        .spacer {
+            flex: 1;
+        }
+        
+        .field {
+            width: 30%;
+            margin: auto;
+        }
+        
+        .searchBar {
+            width: 20%;
+            float: right;
+        }
+        
+        .title {
+            background: red;
+            background: -webkit-linear-gradient(left, pink, violet, olive, pink, blue, violet);
+            background: -o-linear-gradient(right, pink, violet, olive, pink, blue, violet);
+            background: -moz-linear-gradient(right, pink, violet, olive, pink, blue, violet);
+            background: linear-gradient(to right, pink, violet, olive, pink, blue, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3rem;
+        }
