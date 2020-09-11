@@ -25,14 +25,16 @@ class CollectionsContainer extends Component {
     componentDidMount(){
         fetch("http://localhost:3000/api/v1/collections/")
         .then(res => res.json())
-        .then(data => {
-            console.log(data)
+        .then(
+            data => {
+            //console.log(data)
             this.setState(
                 {collections: data.filter((data) => 
                     {
               return  data.user.id ===  this.props.user.id
                 })}
-            )})
+            )}
+            )
     }
 
    
@@ -62,6 +64,7 @@ class CollectionsContainer extends Component {
           method: "DELETE",
           headers: {
             "content-type": "application/json",
+            'Authorization': `bearer ${this.props.token}`
           }
         }
         fetch(`http://localhost:3000/api/v1/collections/${id}`, deleteConfig)
@@ -78,17 +81,18 @@ class CollectionsContainer extends Component {
    
 
     render(){
-        console.log(this.state.collections)
+        //console.log(this.state.collections)
+        let {username} = this.props.user
         let filteredCollections = this.state.collections.filter((collectionFilter)=>{
             return collectionFilter.description.toLowerCase().includes(this.state.searchItem.toLowerCase())
           })
 
-        let {username} = this.props.user
+       
         return(
             <div>
                 <h2 className="title">{username} Collections</h2>
-                <AddCollectionForm newCollectionState={this.newCollectionState} userId={this.props.user.id}/>
-                {this.state.open && <EditCollectionForm currentEditItem={this.state.currentEditItem} editCollectionState={this.editCollectionState}/> }
+                <AddCollectionForm newCollectionState={this.newCollectionState} userId={this.props.user.id} token={this.props.token} />
+                {this.state.open && <EditCollectionForm currentEditItem={this.state.currentEditItem} editCollectionState={this.editCollectionState} token={this.props.token}/> }
                 <Search searchItem={this.state.searchItem} changeSearchItem={this.changeSearchItem}/>
                 <CollectionList  collections = {filteredCollections} deleteCollection = {this.deleteCollection} openEditForm = {this.openEditForm} />
                 

@@ -29,6 +29,7 @@ class EditCollectionForm extends Component{
             headers: {
              'Accept': "application/json",
             'Content-Type': 'application/json',
+            'Authorization': `bearer ${this.props.token}`
             },
             body: JSON.stringify(this.state)
           })
@@ -56,7 +57,7 @@ class EditCollectionForm extends Component{
                 <input type="text" name="description" placeholder="Description" value={this.state.description} onChange={this.changeHandler} />
                 <input type="text" name="source" placeholder="SourceUrl" value={this.state.source} onChange={this.changeHandler}/>
               </div>
-              <button className="ui olive basic button" type="submit">
+              <button className="newform-btn" type="submit">
                Update Collection
               </button>
             </form>
