@@ -19,18 +19,20 @@ class AddCollectionForm extends Component{
     
           this.setState({
             [name]: value,
-            user_id: this.props.userId
+            user_id: this.props.userId,
           });
       }
 
       handleSubmit = evt => {
         evt.preventDefault()
-        console.log(evt.target)
+        //console.log(evt.target)
+        //console.log(this.props.token)
 
         fetch("http://localhost:3000/api/v1/collections", {method: "POST",
             headers: {
              'Accept': "application/json",
             'Content-Type': 'application/json',
+            'Authorization': `bearer ${this.props.token}`
             },
             body: JSON.stringify(this.state)
           })
@@ -59,8 +61,8 @@ class AddCollectionForm extends Component{
                 <input type="text" name="description" placeholder="Description" value={this.state.description} onChange={this.handleChange} />
                 <input type="text" name="source" placeholder="SourceUrl" value={this.state.source} onChange={this.handleChange}/>
               </div>
-              <button className="ui pink basic button" type="submit">
-                Please Add Your New Collection
+              <button className="newform-btn" type="submit">
+              Add New Collection
               </button>
             </form>
           </div> 

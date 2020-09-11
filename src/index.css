@@ -115,3 +115,53 @@
             -webkit-text-fill-color: transparent;
             font-size: 3rem;
         }
+        
+        .logout-btn {
+            width: 12rem;
+            padding: 15px 15px;
+            background-color: #f38383;
+            border-style: none;
+            border-radius: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+        
+        .logout-btn:hover {
+            width: 12rem;
+            padding: 15px 15px;
+            background-color: #db5e5e;
+            transition: background-color 2s;
+            border-style: none;
+            border-radius: 10px;
+        }
+        
+        .logout-text {
+            font-size: 3rem;
+            background: -moz-linear-gradient(right, olive, pink, violet, olive, pink);
+            background: linear-gradient(to right, olive, pink, olive, pink, olive, pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logout-div {
+            margin-top: 25%;
+        }
+        
+        .newform-btn {
+            width: 12rem;
+            padding: 15px 15px;
+            background-color: #f38383;
+            border-style: none;
+            border-radius: 20px;
+            font-size: 15px;
+            color: #fff;
+        }
+        
+        .newform-btn:hover {
+            width: 12rem;
+            padding: 15px 15px;
+            background-color: #db5e5e;
+            transition: background-color 1s;
+            border-style: none;
+            border-radius: 18px;
+        }

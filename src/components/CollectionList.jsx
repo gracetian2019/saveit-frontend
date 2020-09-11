@@ -4,6 +4,7 @@ import CollectionCard from './CollectionCard';
 const CollectionList = (props) => {
     //debugger
  console.log("List", props)
+ 
         return(
             <table className="ui olive celled striped padded table">
             <tbody>
